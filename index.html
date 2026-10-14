@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ورود | پنل مدیریت مشتریان</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" />
+  <script type="module" src="/src/login.js"></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800 antialiased">
+
+  <div class="flex min-h-screen">
+
+    <!-- ===== بخش برندینگ ===== -->
+    <aside class="relative hidden w-[46%] overflow-hidden bg-slate-950 lg:flex lg:flex-col lg:justify-between lg:p-12">
+      <div class="pointer-events-none absolute -top-32 -start-32 h-96 w-96 rounded-full bg-indigo-600/30 blur-3xl"></div>
+      <div class="pointer-events-none absolute bottom-0 end-0 h-80 w-80 rounded-full bg-violet-600/25 blur-3xl"></div>
+      <div class="pointer-events-none absolute inset-0 opacity-[.06]" style="background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:44px 44px"></div>
+
+      <div class="relative flex items-center gap-3">
+        <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 shadow-lg shadow-indigo-500/40">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <p class="text-[17px] font-extrabold text-white">نرم‌افزار مدیریت مشتریان</p>
+          <p class="text-[11.5px] text-slate-400">Customer Relationship Management</p>
+        </div>
+      </div>
+
+      <div class="relative max-w-md">
+        <h1 class="animate-fade-up text-[34px] font-black leading-[1.4] text-white">مشتریان‌تان را<br/>حرفه‌ای‌تر <span class="bg-gradient-to-l from-indigo-400 to-violet-400 bg-clip-text text-transparent">مدیریت کنید</span></h1>
+        <p class="animate-fade-up delay-1 mt-4 text-[14px] leading-7 text-slate-400">تعریف و سازماندهی مشتریان، پیگیری سفارش‌ها و گزارش‌گیری دقیق؛ همه در یک پنل یکپارچه، سریع و زیبا.</p>
+
+        <div class="mt-10 grid grid-cols-3 gap-3">
+          <div class="animate-fade-up delay-2 rounded-2xl border border-white/10 bg-white/[.04] p-4 backdrop-blur">
+            <p class="text-[20px] font-black text-white">+۲٬۴۰۰</p><p class="mt-1 text-[11px] text-slate-400">مشتری فعال</p>
+          </div>
+          <div class="animate-fade-up delay-3 rounded-2xl border border-white/10 bg-white/[.04] p-4 backdrop-blur">
+            <p class="text-[20px] font-black text-white">۹۸٪</p><p class="mt-1 text-[11px] text-slate-400">رضایت کاربران</p>
+          </div>
+          <div class="animate-fade-up delay-4 rounded-2xl border border-white/10 bg-white/[.04] p-4 backdrop-blur">
+            <p class="text-[20px] font-black text-white">۲۴/۷</p><p class="mt-1 text-[11px] text-slate-400">پشتیبانی آنلاین</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="relative text-[12px] text-slate-500">© ۱۴۰۵ — تمامی حقوق محفوظ است.</p>
+    </aside>
+
+    <!-- ===== فرم ورود ===== -->
+    <main class="flex flex-1 items-center justify-center px-5 py-10 sm:px-10">
+      <div class="w-full max-w-[420px]">
+        <div class="mb-8 flex items-center gap-3 lg:hidden">
+          <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 shadow-lg shadow-indigo-500/30">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <p class="text-[16px] font-extrabold">نرم‌افزار مدیریت مشتریان</p>
+        </div>
+
+        <div class="animate-fade-up rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xl shadow-slate-200/60 sm:p-9">
+          <h2 class="text-[22px] font-black text-slate-900">خوش برگشتید 👋</h2>
+          <p class="mt-1.5 text-[13px] text-slate-500">برای ورود به پنل مدیریت، اطلاعات حساب خود را وارد کنید.</p>
+
+          <form id="loginForm" class="mt-7 space-y-5" novalidate>
+            <div>
+              <label class="label" for="username">نام کاربری <span class="text-rose-500">*</span></label>
+              <div class="relative">
+                <svg class="pointer-events-none absolute start-3.5 top-1/2 -translate-y-1/2 text-slate-400" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <input id="username" type="text" class="field ps-10" placeholder="نام کاربری خود را وارد کنید" autocomplete="username" />
+              </div>
+              <p class="err-msg" data-err="username">نام کاربری الزامی است.</p>
+            </div>
+
+            <div>
+              <label class="label" for="password">رمز عبور <span class="text-rose-500">*</span></label>
+              <div class="relative">
+                <svg class="pointer-events-none absolute start-3.5 top-1/2 -translate-y-1/2 text-slate-400" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <input id="password" type="password" class="field ps-10 pe-11" placeholder="••••••••" autocomplete="current-password" />
+                <button type="button" id="togglePass" class="absolute end-3 top-1/2 -translate-y-1/2 text-slate-400 transition hover:text-slate-600" tabindex="-1" aria-label="نمایش رمز عبور">
+                  <svg id="eyeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+              </div>
+              <p class="err-msg" data-err="password">رمز عبور الزامی است.</p>
+            </div>
+
+            <p id="loginError" class="hidden rounded-xl bg-rose-50 px-3.5 py-2.5 text-[12.5px] font-semibold text-rose-600"></p>
+
+            <div class="flex items-center justify-between text-[12.5px]">
+              <label class="flex cursor-pointer items-center gap-2 font-medium text-slate-600">
+                <input type="checkbox" id="remember" class="h-4 w-4 rounded accent-indigo-600" checked /> مرا به خاطر بسپار
+              </label>
+              <a href="#" class="font-bold text-indigo-600 transition hover:text-indigo-500">رمز عبور را فراموش کرده‌ام</a>
+            </div>
+
+            <button id="loginBtn" type="submit" class="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-l from-indigo-600 to-violet-600 py-3 text-[14px] font-extrabold text-white shadow-lg shadow-indigo-500/30 transition-all duration-200 hover:shadow-indigo-500/50 hover:brightness-110 active:scale-[.98]">
+              <span id="loginBtnText">ورود به پنل مدیریت</span>
+              <svg id="loginSpinner" class="hidden animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-6.2-8.56"/></svg>
+              <svg id="loginArrow" class="transition-transform group-hover:-translate-x-1" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </button>
+          </form>
+
+          <div class="mt-6 rounded-xl border border-dashed border-indigo-200 bg-indigo-50/70 px-4 py-3 text-center">
+            <p class="text-[12px] font-semibold text-indigo-700">🔑 ورود نمایشی — نام کاربری: <b dir="ltr">admin</b> &nbsp;|&nbsp; رمز عبور: <b dir="ltr">1234</b></p>
+          </div>
+        </div>
+
+        <p class="mt-6 text-center text-[12px] text-slate-400">با ورود به پنل، <a href="#" class="font-semibold text-slate-500 underline decoration-dotted">قوانین و حریم خصوصی</a> را می‌پذیرید.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

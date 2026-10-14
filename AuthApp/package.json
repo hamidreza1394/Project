@@ -1,0 +1,29 @@
+{
+  "name": "customer-panel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --config Vite.config.js --host 0.0.0.0",
+    "build": "vite build --config Vite.config.js",
+    "preview": "vite preview --config Vite.config.js --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamidreza1394/Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamidreza1394/Project/issues"
+  },
+  "homepage": "https://github.com/hamidreza1394/Project#readme",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^6.4.4"
+  }
+}

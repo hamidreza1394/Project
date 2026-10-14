@@ -1,0 +1,53 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "داشبورد";
+}
+
+<div class="dashboard-page" style="min-height:auto; background:transparent; padding:0;">
+
+@if (Model.IsAuthenticated)
+{
+    <div class="dashboard-hero">
+        <h1>🎉 خوش آمدید!</h1>
+        <p>با موفقیت وارد حساب کاربری خود شدید</p>
+        <div style="background:rgba(255,255,255,0.15); border-radius:14px; padding:18px; margin:25px 0; display:inline-block;">
+            <span style="opacity:0.8; font-size:0.9rem;">کاربر:</span>
+            <strong style="font-size:1.1rem; margin-right:8px;">@Model.UserEmail</strong>
+        </div>
+        <br />
+        <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" style="display:inline;">
+            <button type="submit" class="btn-logout">🚪 خروج از حساب</button>
+        </form>
+    </div>
+}
+else
+{
+    <div class="dashboard-hero">
+        <h1>👋 به AuthApp خوش آمدید</h1>
+        <p>یک سیستم احراز هویت کامل با ASP.NET Core و Razor Pages</p>
+        <div style="margin-top:30px; display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+            <a asp-area="Identity" asp-page="/Account/Login" class="btn-logout" style="background:white; color:#667eea; font-weight:700;">🔑 ورود</a>
+            <a asp-area="Identity" asp-page="/Account/Register" class="btn-logout">✨ ثبت‌نام</a>
+        </div>
+    </div>
+}
+
+    <div style="max-width:700px; margin:0 auto 40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;">
+        <div style="background:white; border-radius:16px; padding:25px; box-shadow:0 8px 25px rgba(0,0,0,0.08); text-align:center; transition:transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="font-size:40px; margin-bottom:10px;">🔐</div>
+            <h5 style="color:#2d3748; margin-bottom:8px;">احراز هویت امن</h5>
+            <p style="color:#718096; font-size:0.9rem; margin:0;">ASP.NET Core Identity</p>
+        </div>
+        <div style="background:white; border-radius:16px; padding:25px; box-shadow:0 8px 25px rgba(0,0,0,0.08); text-align:center; transition:transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="font-size:40px; margin-bottom:10px;">🗄️</div>
+            <h5 style="color:#2d3748; margin-bottom:8px;">دیتابیس SQLite</h5>
+            <p style="color:#718096; font-size:0.9rem; margin:0;">Entity Framework Core</p>
+        </div>
+        <div style="background:white; border-radius:16px; padding:25px; box-shadow:0 8px 25px rgba(0,0,0,0.08); text-align:center; transition:transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="font-size:40px; margin-bottom:10px;">🎨</div>
+            <h5 style="color:#2d3748; margin-bottom:8px;">رابط کاربری زیبا</h5>
+            <p style="color:#718096; font-size:0.9rem; margin:0;">طراحی مدرن و واکنش‌گرا</p>
+        </div>
+    </div>
+</div>
